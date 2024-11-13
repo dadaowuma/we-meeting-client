@@ -1,0 +1,34 @@
+{
+  "name": "we-meeting-client",
+  "version": "1.0.0",
+  "description": "WeMetting Client",
+  "author": "dadaowuma<dadaowuma@163.com>",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "docs:dev": "vitepress dev docs --port 5174",
+    "docs:build": "vitepress build docs",
+    "docs:preview": "vitepress preview docs",
+    "test": "vitest"
+  },
+  "keywords": [
+    "meeting online"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "5.1.5",
+    "happy-dom": "15.11.4",
+    "vite": "5.4.11",
+    "vitepress": "1.5.0",
+    "vitest": "2.1.4"
+  },
+  "dependencies": {
+    "axios": "1.7.7",
+    "js-cookie": "3.0.5",
+    "pinia": "2.2.6",
+    "vue": "3.5.12",
+    "vue-router": "4.4.5"
+  }
+}
