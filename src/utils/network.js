@@ -4,17 +4,17 @@
 
 import axios from 'axios';
 
-import {api_host} from '../config';
+import {api_base_url} from '../config';
 
-const instance = axios.create({
-  baseURL: api_host,
+const network = axios.create({
+  baseURL: api_base_url,
   timeout: 1000,
   headers: {
     'X-client-name': 'WeMeeting'
   }
 });
 
-instance.interceptors.request.use(function (config) {
+network.interceptors.request.use(function (config) {
   /**
    * 此处在请求发起之前，可做一些个性化配置
    * 例如：配置token
@@ -24,10 +24,10 @@ instance.interceptors.request.use(function (config) {
   return Promise.reject(error);
 });
 
-instance.interceptors.response.use(function (response) {
+network.interceptors.response.use(function (response) {
   return response.data;
 }, function (error) {
   return Promise.reject(error);
 });
 
-export default instance;
+export default network;

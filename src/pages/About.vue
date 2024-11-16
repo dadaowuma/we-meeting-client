@@ -3,6 +3,10 @@ import {ref, onMounted} from 'vue'
 import {useCounter1Store, useCounter2Store} from '../store/count-store'
 import cookie from '../3rdlibs/cookie'
 
+import test from '../modules/test'
+
+import {createWSClient} from '../utils/web-socket'
+
 const count = ref(0)
 const store1 = useCounter1Store()
 const store2 = useCounter2Store()
@@ -17,6 +21,16 @@ const updateStore2 = () => {
 
 onMounted(() => {
   cookie.set('myname', 'wemeeting')
+
+  test({nm: 'hh'})
+    .then(res => {
+      console.log(res)
+    })
+    .catch(err => {
+      console.log(err)
+    })
+
+  createWSClient()
 })
 </script>
 
