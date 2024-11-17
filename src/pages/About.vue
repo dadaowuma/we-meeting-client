@@ -1,5 +1,5 @@
 <script setup>
-import {ref, onMounted} from 'vue'
+import {ref, onMounted, onBeforeUnmount} from 'vue'
 import {useCounter1Store, useCounter2Store} from '../store/count-store'
 import cookie from '../3rdlibs/cookie'
 
@@ -19,6 +19,8 @@ const updateStore2 = () => {
   store2.increment()
 }
 
+let ws
+
 onMounted(() => {
   cookie.set('myname', 'wemeeting')
 
@@ -30,7 +32,13 @@ onMounted(() => {
       console.log(err)
     })
 
-  createWSClient()
+  ws = createWSClient()
+})
+
+onBeforeUnmount(() => {
+  console.log('websocket主动断联')
+  ws && ws.close()
+  console.log('websocket主动断联，成功')
 })
 </script>
 

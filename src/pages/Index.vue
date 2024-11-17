@@ -18,8 +18,8 @@
       </li>
     </ul>
 
-    <h1>WeMeeting 首页，用户已经登录</h1>
-    <div>用户可以做会议预定、参加会议、历史会议管理等操作</div>
+    <h1>WeMeeting 首页</h1>
+    <div>用户未登录，产品介绍，引导用户登录</div>
   </div>
 </template>
 
