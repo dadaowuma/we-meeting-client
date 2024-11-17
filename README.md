@@ -59,3 +59,4 @@ $ npm run docs:dev # localhost:5174
 - [vite](https://vite.dev/)
 - [vitepress](https://vitepress.dev/zh/)
 - [vitest](https://cn.vitest.dev/)
+- [vue test utils](https://test-utils.vuejs.org/)

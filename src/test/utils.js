@@ -35,3 +35,12 @@ export const preparePinia = () => {
 
   return app;
 }
+
+export const prepareApp = () => {
+  const app = createVueApp();
+  const div = createMountPoint();
+
+  app.mount(div);
+
+  return app;
+}
