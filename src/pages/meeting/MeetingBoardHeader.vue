@@ -1,5 +1,6 @@
 <script setup>
 import {useFullScreen} from '../../hooks/use-full-screen'
+import Clock from './Clock.vue'
 
 const {is_full_screen, handleFullScreen} = useFullScreen()
 </script>
@@ -11,7 +12,9 @@ const {is_full_screen, handleFullScreen} = useFullScreen()
         <span>ID：923 648 376</span>
       </div>
       <div class="meeting-board-header-item"><span>李四的会议</span></div>
-      <div class="meeting-board-header-item"><span>00:08:41</span></div>
+      <div class="meeting-board-header-item">
+        <Clock />
+      </div>
       <div class="meeting-board-header-item"><span>限时</span></div>
     </div>
     <div class="meeting-board-header-aside-right">
